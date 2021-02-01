@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:student_room/pages/splash_page.dart';
 import 'package:student_room/theme.dart';
 import 'package:student_room/widgets/course_tile.dart';
 
@@ -144,7 +145,14 @@ class CoursePage extends StatelessWidget {
                           (2 * defaultMargin),
                       height: 50,
                       child: FlatButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SplashPage(),
+                            ),
+                          );
+                        },
                         color: Color(0xffECEEF5),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(17),
